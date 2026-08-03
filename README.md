@@ -71,14 +71,11 @@ Raw (Volumes) → Bronze (Auto Loader) → Silver (DLT + CDC/SCD1) → Gold (Dim
 ```
 airline-data-lakehouse-project/
 |
-|-- data/                             # Sample raw airline datasets used for ingestion
+|-- datasets/                             # Sample raw airline datasets used for ingestion
 |
-|-- docs/                             # Project documentation and architecture details
-|   |-- data_architecture.drawio      # Diagram of Raw -> Bronze -> Silver -> Gold flow
-|   |-- data_flow.drawio              # Diagram of ingestion & orchestration flow
-|   |-- data_models.drawio            # Star schema (dim/fact) diagram
-|   |-- data_catalog.md               # Catalog of tables, fields & metadata
-|   |-- naming_conventions.md         # Naming guidelines for catalogs, schemas, tables
+|-- databricks jobs/                             # Project documentation and architecture details
+|   |-- BronzeIngestion
+|   |-- DLT Silver Layer
 |
 |-- notebooks/                        # Databricks notebooks for each layer
 |   |-- bronze/                       # Auto Loader ingestion notebooks (streaming, schema evolution)
