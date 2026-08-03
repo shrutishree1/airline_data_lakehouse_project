@@ -40,11 +40,11 @@ Architect an end-to-end data pipeline on Databricks to ingest, cleanse, and mode
 
 #### Specifications
 - **Data Sources**: Ingest raw airline data (multi-source) landed in cloud storage / Unity Catalog Volumes.
-- **Ingestion**: Incrementally stream raw files into Bronze Delta tables using Auto Loader — with schema evolution and checkpointing to handle changing source schemas reliably.
+- **Ingestion**: Incrementally stream raw files into Bronze Delta tables using Auto Loader - with schema evolution and checkpointing to handle changing source schemas reliably.
 - **Data Quality**: Enforce data quality rules (expectations) at the Silver layer using DLT, and track record-level changes via CDC-based SCD Type 1.
 - **Integration**: Combine cleansed Silver data into a parameter-driven Gold layer, dynamically generating dimension and fact tables.
 - **Governance**: Use Unity Catalog for centralized access control, lineage, and volume-based storage across all layers.
-- **Orchestration**: Automate the complete flow — ingestion → DLT pipelines → Gold builder — using Databricks Workflows with dynamic multi-source parameters.
+- **Orchestration**: Automate the complete flow - ingestion → DLT pipelines → Gold builder - using Databricks Workflows with dynamic multi-source parameters.
 - **Documentation**: Provide clear documentation of the architecture and data flow to support both engineering and analytics stakeholders.
 
 <hr>
@@ -87,7 +87,6 @@ airline-data-lakehouse-project/
 |
 |-- workflows/                        # Databricks Workflows job definitions (orchestration configs)
 |
-|-- tests/                            # Data quality and pipeline test scripts
 |
 |-- README.md                         # Project overview and instructions
 |-- LICENSE                           # License information for the repository
