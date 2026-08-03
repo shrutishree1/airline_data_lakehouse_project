@@ -55,8 +55,8 @@ The data architecture for this project follows the Medallion Architecture with a
 
 1. **Raw Layer**: Source files land as-is in Unity Catalog Volumes (cloud storage) with no transformation — the immutable landing zone.
 2. **Bronze Layer**: Raw files are incrementally ingested into Delta tables using **Auto Loader**, with schema evolution and checkpointing for fault-tolerant streaming ingestion.
-3. **Silver Layer**: Built using **Delta Live Tables (DLT)** — applies data quality expectations, cleansing, and **CDC-based SCD Type 1** to keep records up to date.
-4. **Gold Layer**: A reusable, **parameter-driven dim/fact builder** dynamically generates dimension and fact tables with surrogate keys, using **Delta MERGE** upserts — modeled into a star schema for reporting.
+3. **Silver Layer**: Built using **Delta Live Tables (DLT)** - applies data quality expectations, cleansing, and **CDC-based SCD Type 1** to keep records up to date.
+4. **Gold Layer**: A reusable, **parameter-driven dim/fact builder** dynamically generates dimension and fact tables with surrogate keys, using **Delta MERGE** upserts - modeled into a star schema for reporting.
 
 ```
 Raw (Volumes) → Bronze (Auto Loader) → Silver (DLT + CDC/SCD1) → Gold (Dim/Fact Builder, Star Schema)
