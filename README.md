@@ -87,7 +87,6 @@ airline-data-lakehouse-project/
 |
 |-- workflows/                        # Databricks Workflows job definitions (orchestration configs)
 |
-|
 |-- README.md                         # Project overview and instructions
 |-- LICENSE                           # License information for the repository
 ```
