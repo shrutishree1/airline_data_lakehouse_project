@@ -1,0 +1,16 @@
+resources:
+  pipelines:
+    pipeline_dlt_silver_layer:
+      name: DLT_Silver_Layer
+      libraries:
+        - glob:
+            include: /Workspace/Users/shrutibsns8@gmail.com/New Pipeline 2026-07-15 16:48
+              (2)/transformations/**
+      schema: silver
+      continuous: false
+      development: false
+      photon: true
+      channel: CURRENT
+      catalog: workspace
+      serverless: true
+      root_path: /Workspace/Users/shrutibsns8@gmail.com/New Pipeline 2026-07-15 16:48 (2)
